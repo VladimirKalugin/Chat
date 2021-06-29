@@ -19,6 +19,7 @@ extension Message {
         return request
     }
 
+    
     @NSManaged public var isReciver: Bool
     @NSManaged public var time: Date
     @NSManaged public var text: String
