@@ -196,7 +196,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="dXE-Le-3hj" kind="presentation" modalPresentationStyle="fullScreen" id="ufH-3H-5Ye"/>
+                                    <segue destination="ufw-16-bTI" kind="presentation" modalPresentationStyle="fullScreen" id="U40-BM-Lmq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -219,7 +219,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Maf-fO-K7V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="940" y="751"/>
+            <point key="canvasLocation" x="209" y="751"/>
+        </scene>
+        <!--Loading View Controller-->
+        <scene sceneID="FEs-NE-uOW">
+            <objects>
+                <viewController id="ufw-16-bTI" customClass="LoadingViewController" customModule="ChatFun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eiF-rc-FvG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="lPd-Re-oPB">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cne-Ac-tbl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lPd-Re-oPB" firstAttribute="centerY" secondItem="eiF-rc-FvG" secondAttribute="centerY" id="FYH-aN-gi0"/>
+                            <constraint firstItem="lPd-Re-oPB" firstAttribute="centerX" secondItem="eiF-rc-FvG" secondAttribute="centerX" id="puA-Xs-wcH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activitiIndicator" destination="lPd-Re-oPB" id="bFv-RU-usk"/>
+                        <segue destination="dXE-Le-3hj" kind="presentation" identifier="showTableView" modalPresentationStyle="fullScreen" id="zqN-3p-Bs5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OHb-yX-pqp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="983" y="751"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="N1g-fM-Jzq">
@@ -227,6 +255,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dXE-Le-3hj" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="PUo-ur-IG5"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="aia-tv-dCX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>

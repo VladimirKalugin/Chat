@@ -30,9 +30,7 @@ class ChatsTableViewController: UITableViewController {
             label.text = "No Chats"
             label.font = UIFont(name: "system-bold", size: 25)
             label.textColor = UIColor.lightGray
-            label.layer.cornerRadius = label.frame.height / 2
             label.textAlignment = .center
-            label.isHidden = false
             label.center = self.view.center
             
             view.addSubview(label)
