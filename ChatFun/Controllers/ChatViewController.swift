@@ -30,6 +30,7 @@ class ChatViewController: UIViewController {
                 one.time < two.time
             })
         }
+        collectionView.setCollectionViewLayout(CustomFlowLayout(), animated: false)
     }
     
     override func viewWillAppear(_ animated: Bool) {
