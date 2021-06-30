@@ -22,6 +22,21 @@ class ChatsTableViewController: UITableViewController {
             one.lastMessageTime ?? Date() > two.lastMessageTime ?? Date()
         })
         tableView.reloadData()
+        
+        if let chats = chats, chats.isEmpty {
+            
+            let label = UILabel()
+            label.frame = CGRect(x: 0, y: 0, width: 100, height: 40)
+            label.text = "No Chats"
+            label.font = UIFont(name: "system-bold", size: 25)
+            label.textColor = UIColor.lightGray
+            label.layer.cornerRadius = label.frame.height / 2
+            label.textAlignment = .center
+            label.isHidden = false
+            label.center = self.view.center
+            
+            view.addSubview(label)
+        }
     }
     
     
@@ -32,19 +47,6 @@ class ChatsTableViewController: UITableViewController {
     
     private func setupView() {
         let view = UIView()
-        if let chats = chats, chats.isEmpty {
-            
-            let label = UILabel()
-            label.text = "No Chats"
-            label.font = UIFont(name: "system", size: 25)
-            label.textColor = UIColor.black
-            label.backgroundColor = .red
-            label.isHidden = false
-            label.center = self.view.center
-                    
-            view.addSubview(label)
-            tableView.tableFooterView = view
-        }
         tableView.tableFooterView = view
         
         navigationController?.navigationBar.prefersLargeTitles = true
