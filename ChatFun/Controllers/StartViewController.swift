@@ -11,10 +11,13 @@ class StartViewController: UIViewController {
 
 
     @IBOutlet weak var enterButton: UIButton!
+    @IBOutlet weak var loadingView: UIView!
+    @IBOutlet weak var activitiIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        loadingView.isHidden = true
+        loadingView.backgroundColor = UIColor.init(hexaString: "FFFFFF", alpha: 0.4)
         setupEnterButton()
 //        enterButton.animation()
     }
@@ -22,6 +25,13 @@ class StartViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         enterButton.animation()
+    }
+    @IBAction func enterButtonPressed(_ sender: Any) {
+        activitiIndicator.startAnimating()
+        loadingView.isHidden = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+            self.performSegue(withIdentifier: "showTableView", sender: nil)
+        }
     }
     
     private func setupEnterButton() {

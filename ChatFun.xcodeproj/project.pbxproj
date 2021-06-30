@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4539E0B0268C029A0035426A /* CustomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4539E0AF268C029A0035426A /* CustomFlowLayout.swift */; };
-		4539E0B4268C1B7C0035426A /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4539E0B3268C1B7C0035426A /* LoadingViewController.swift */; };
 		455CAD202685C25C00C39982 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455CAD1F2685C25C00C39982 /* AppDelegate.swift */; };
 		455CAD272685C25C00C39982 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455CAD252685C25C00C39982 /* Main.storyboard */; };
 		455CAD2A2685C25C00C39982 /* ChatFun.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 455CAD282685C25C00C39982 /* ChatFun.xcdatamodeld */; };
@@ -32,7 +31,6 @@
 
 /* Begin PBXFileReference section */
 		4539E0AF268C029A0035426A /* CustomFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFlowLayout.swift; sourceTree = "<group>"; };
-		4539E0B3268C1B7C0035426A /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoadingViewController.swift; path = ChatFun/Controllers/LoadingViewController.swift; sourceTree = SOURCE_ROOT; };
 		455CAD1C2685C25C00C39982 /* ChatFun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatFun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		455CAD1F2685C25C00C39982 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		455CAD262685C25C00C39982 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -134,7 +132,6 @@
 				455CAD472685C64100C39982 /* ChatCollectionViewCell.swift */,
 				455CAD452685C64100C39982 /* ChatTableViewCell.swift */,
 				455CAD482685C64100C39982 /* StartViewController.swift */,
-				4539E0B3268C1B7C0035426A /* LoadingViewController.swift */,
 				455CAD462685C64100C39982 /* ChatsTableViewController.swift */,
 				455CAD442685C64100C39982 /* ChatViewController.swift */,
 				4539E0AF268C029A0035426A /* CustomFlowLayout.swift */,
@@ -235,7 +232,6 @@
 				455CAD492685C64100C39982 /* BaseCollectionViewCell.swift in Sources */,
 				45EED69C2689A4AF00069E84 /* Extention + UIButton.swift in Sources */,
 				455CAD77268606FB00C39982 /* Chat+CoreDataProperties.swift in Sources */,
-				4539E0B4268C1B7C0035426A /* LoadingViewController.swift in Sources */,
 				4539E0B0268C029A0035426A /* CustomFlowLayout.swift in Sources */,
 				455CAD79268606FB00C39982 /* Message+CoreDataProperties.swift in Sources */,
 				455CAD522685C66C00C39982 /* Extention + UIColor.swift in Sources */,

@@ -196,58 +196,50 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ufw-16-bTI" kind="presentation" modalPresentationStyle="fullScreen" id="U40-BM-Lmq"/>
+                                    <action selector="enterButtonPressed:" destination="8IM-3q-8x3" eventType="touchUpInside" id="b81-C6-5rz"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MEu-BK-tAL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="6cr-Sg-sea">
+                                        <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="6cr-Sg-sea" firstAttribute="centerX" secondItem="MEu-BK-tAL" secondAttribute="centerX" id="Mcc-Bn-f0W"/>
+                                    <constraint firstItem="6cr-Sg-sea" firstAttribute="centerY" secondItem="MEu-BK-tAL" secondAttribute="centerY" id="PDQ-KC-EVG"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="I2i-FZ-fsA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="k2V-q8-MaA" firstAttribute="height" secondItem="hKJ-xG-3y6" secondAttribute="height" multiplier="0.281859" id="6rx-Ob-g5Z"/>
+                            <constraint firstItem="MEu-BK-tAL" firstAttribute="trailing" secondItem="I2i-FZ-fsA" secondAttribute="trailing" id="9mF-kS-2Ek"/>
                             <constraint firstItem="G5g-jW-uID" firstAttribute="height" secondItem="k2V-q8-MaA" secondAttribute="height" multiplier="0.281915" id="Ai0-vB-WXH"/>
                             <constraint firstItem="G5g-jW-uID" firstAttribute="width" secondItem="k2V-q8-MaA" secondAttribute="width" multiplier="1.15878" id="CFF-xQ-IRH"/>
+                            <constraint firstItem="MEu-BK-tAL" firstAttribute="leading" secondItem="I2i-FZ-fsA" secondAttribute="leading" id="Jw6-gO-ipd"/>
                             <constraint firstItem="k2V-q8-MaA" firstAttribute="top" secondItem="I2i-FZ-fsA" secondAttribute="top" constant="132" id="SRX-h0-sqc"/>
                             <constraint firstItem="k2V-q8-MaA" firstAttribute="leading" secondItem="I2i-FZ-fsA" secondAttribute="leading" constant="39.5" id="TW3-H3-dcl"/>
                             <constraint firstItem="I2i-FZ-fsA" firstAttribute="trailing" secondItem="k2V-q8-MaA" secondAttribute="trailing" constant="39.5" id="Uin-Jv-WXK"/>
                             <constraint firstItem="I2i-FZ-fsA" firstAttribute="bottom" secondItem="G5g-jW-uID" secondAttribute="bottom" constant="20" id="V0Q-gq-27G"/>
+                            <constraint firstItem="I2i-FZ-fsA" firstAttribute="bottom" secondItem="MEu-BK-tAL" secondAttribute="bottom" id="cTT-E8-HdG"/>
                             <constraint firstItem="G5g-jW-uID" firstAttribute="centerX" secondItem="I2i-FZ-fsA" secondAttribute="centerX" id="foh-Uc-Qaa"/>
+                            <constraint firstItem="MEu-BK-tAL" firstAttribute="top" secondItem="I2i-FZ-fsA" secondAttribute="top" id="pc6-w5-M54"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activitiIndicator" destination="6cr-Sg-sea" id="BNC-0X-WzJ"/>
                         <outlet property="enterButton" destination="G5g-jW-uID" id="Ce8-bD-BjS"/>
+                        <outlet property="loadingView" destination="MEu-BK-tAL" id="GGM-z4-jdP"/>
+                        <segue destination="dXE-Le-3hj" kind="presentation" identifier="showTableView" modalPresentationStyle="fullScreen" id="KWS-Sl-2wD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Maf-fO-K7V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="209" y="751"/>
-        </scene>
-        <!--Loading View Controller-->
-        <scene sceneID="FEs-NE-uOW">
-            <objects>
-                <viewController id="ufw-16-bTI" customClass="LoadingViewController" customModule="ChatFun" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="eiF-rc-FvG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="lPd-Re-oPB">
-                                <rect key="frame" x="169" y="315" width="37" height="37"/>
-                            </activityIndicatorView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="cne-Ac-tbl"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="lPd-Re-oPB" firstAttribute="centerY" secondItem="eiF-rc-FvG" secondAttribute="centerY" id="FYH-aN-gi0"/>
-                            <constraint firstItem="lPd-Re-oPB" firstAttribute="centerX" secondItem="eiF-rc-FvG" secondAttribute="centerX" id="puA-Xs-wcH"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="activitiIndicator" destination="lPd-Re-oPB" id="bFv-RU-usk"/>
-                        <segue destination="dXE-Le-3hj" kind="presentation" identifier="showTableView" modalPresentationStyle="fullScreen" id="zqN-3p-Bs5"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OHb-yX-pqp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="983" y="751"/>
+            <point key="canvasLocation" x="993" y="751"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="N1g-fM-Jzq">
