@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class ChatViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
@@ -31,6 +30,7 @@ class ChatViewController: UIViewController {
                 one.time < two.time
             })
         }
+        collectionView.setCollectionViewLayout(CustomFlowLayout(), animated: false)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -61,7 +61,7 @@ class ChatViewController: UIViewController {
             collectionView.insertItems(at: [cellIndex])
             
             scrollToBottom()
-    
+            
             newMessageTextView.text = nil
         
             setColorForButton()
