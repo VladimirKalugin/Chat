@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class ChatViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
