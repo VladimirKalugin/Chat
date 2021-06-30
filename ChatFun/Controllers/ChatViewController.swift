@@ -33,11 +33,9 @@ class ChatViewController: UIViewController {
         collectionView.setCollectionViewLayout(CustomFlowLayout(), animated: false)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        let sectionNumber = 0
-        let indexPath = IndexPath(row: self.collectionView.numberOfItems(inSection: sectionNumber) - 1, section: sectionNumber)
-        collectionView.scrollToItem(at: indexPath, at: .bottom, animated: true)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        scrollToBottom()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -62,15 +60,19 @@ class ChatViewController: UIViewController {
             let cellIndex = IndexPath(item: messages.count - 1 , section: 0)
             collectionView.insertItems(at: [cellIndex])
             
-            let sectionNumber = 0
-            let indexPath = IndexPath(row: self.collectionView.numberOfItems(inSection: sectionNumber) - 1, section: sectionNumber)
-            collectionView.scrollToItem(at: indexPath, at: .bottom, animated: true)
+            scrollToBottom()
             
             newMessageTextView.text = nil
         
             setColorForButton()
         }
        
+    }
+    
+    private func scrollToBottom() {
+        let sectionNumber = 0
+        let indexPath = IndexPath(row: self.collectionView.numberOfItems(inSection: sectionNumber) - 1, section: sectionNumber)
+        collectionView.scrollToItem(at: indexPath, at: .bottom, animated: true)
     }
     
     private func addTouch() {
